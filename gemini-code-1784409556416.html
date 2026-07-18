@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Profesional</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #f1c40f; /* Color estrella */
+            --bg-color: #f4f7f6;
+        }
+        body { font-family: sans-serif; background-color: var(--bg-color); margin: 0; padding: 20px; overflow-x: hidden; }
+        
+        /* Contenedor con efecto de estrellas */
+        .star-container {
+            position: relative;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Estrellas animadas */
+        .star {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: var(--accent-color);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            animation: orbit 4s linear infinite;
+        }
+
+        @keyframes orbit {
+            0% { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="star-container">
+        <!-- Las estrellas -->
+        <div class="star" style="top: -20px; left: 50%;"></div>
+        <div class="star" style="top: 50%; left: -20px; animation-delay: 2s;"></div>
+        
+        <h2>Bienvenido</h2>
+        <p>Comunicadora Corporativa enfocada en resultados.</p>
+    </div>
+
+</body>
+</html>
