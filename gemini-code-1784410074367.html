@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Profesional</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        header {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        /* Sección de Servicios */
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .servicio-item {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        .icon { font-size: 2rem; }
+
+        /* Estrellas en movimiento */
+        .comentario-container {
+            position: relative;
+            padding: 40px;
+            text-align: center;
+            border: 2px solid var(--accent-color);
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        .star {
+            position: absolute;
+            color: gold;
+            font-size: 1.5rem;
+            animation: moveStars 5s linear infinite;
+        }
+        @keyframes moveStars {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(20px, -20px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        /* Botón centrado */
+        .cta-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .btn-registro {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a mi espacio</h1>
+    </header>
+
+    <div class="container">
+        <section id="servicios">
+            <h2>Servicios que Transforman con Amor, Respeto y Consciencia</h2>
+            <div class="servicios-grid">
+                <div class="servicio-item"><div class="icon">❤️</div><p>Amor</p></div>
+                <div class="servicio-item"><div class="icon">🤝</div><p>Respeto</p></div>
+                <div class="servicio-item"><div class="icon">✨</div><p>Consciencia</p></div>
+            </div>
+        </section>
+
+        <section class="comentario-container">
+            <span class="star" style="top: 10px; left: 10px;">★</span>
+            <p>"Una experiencia transformadora y profesional."</p>
+            <span class="star" style="bottom: 10px; right: 10px;">★</span>
+        </section>
+
+        <div class="cta-container">
+            <a href="#" class="btn-registro">Quiero registrarme y pagar</a>
+        </div>
+    </div>
+</body>
+</html>
