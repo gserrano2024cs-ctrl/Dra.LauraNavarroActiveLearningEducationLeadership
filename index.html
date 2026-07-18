@@ -10,7 +10,15 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+  
 <style>
+  /* NUEVO: Fondo con estrellas para testimonios */
+  .testimonials-section { position: relative; background: var(--bg-roto); padding: 80px 0; overflow: hidden; }
+  .star-field { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; background-image: radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px); background-size: 50px 50px; animation: twinkle 5s linear infinite; opacity: 0.3; }
+  @keyframes twinkle { 0% { transform: translateY(0); } 100% { transform: translateY(-50px); } }
+  
+  /* Iconos de Servicios */
+  .service-icon { width: 48px; height: 48px; margin-bottom: 16px; display: block; margin-left: auto; margin-right: auto; }
   :root {
     --bg-roto: #FDFCF8; /* Blanco roto */
     --texto: #20302F;
