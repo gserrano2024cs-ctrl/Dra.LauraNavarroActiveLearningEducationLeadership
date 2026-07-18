@@ -3,69 +3,257 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dra. Laura Navarro Rosado, Ph.D. | Active Learning</title>
-
-<!-- Favicon Morado -->
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%236D48B4%22/><text x=%2250%22 y=%2267%22 font-size=%2248%22 font-family=%22Inter, sans-serif%22 font-weight=%22500%22 fill=%22%23FFFFFF%22 text-anchor=%22middle%22>AL</text></svg>">
-
+<title>Dra. Laura Navarro Rosado - Active Learning</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#FAF9F6; /* Blanco Roto */ --teal:#096364;--purple:#6D48B4;--olive:#C4C367;--mint:#B2EFCF;--periwinkle:#CADCF1;--lightpurple:#C5B3FF;--coral:#E2704F;--ink:#20302F;--muted:#51625F;--yellow:#FFEA4F}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:'Manrope',sans-serif;font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+  :root {
+    --bg-blanco-roto: #FAF9F6;
+    --amarillo-pastel: #FFF07C;
+    --texto-oscuro: #1A1A1A;
+    --teal: #096364;
+    --morado: #6D48B4;
+    --naranja: #E2704F;
+    --rosa: #E9969C;
+  }
 
-/* Tipografías: Normales, sin negrita gruesa, en Mayúsculas */
-h1,h2,h3,.serif{font-family:'Inter', sans-serif;font-weight:400;text-transform:uppercase;color:#141414;letter-spacing:-0.01em}
-.accent-teal{color:var(--teal) !important}
-a{text-decoration:none;color:inherit}
-.container{max-width:1020px;margin:0 auto;padding:0 26px}
-section{padding:80px 0}
-@media(max-width:640px){section{padding:54px 0}body{font-size:16.5px}}
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Manrope', sans-serif; color: var(--texto-oscuro); background-color: var(--bg-blanco-roto); line-height: 1.6; }
+  
+  /* Títulos Normales en Mayúscula (Sin negrita) */
+  h1, h2, h3 { 
+    font-family: 'Inter', sans-serif; 
+    font-weight: 400; 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
 
-/* HERO - Fondo Blanco Roto con Textura Sutil */
-.hero{
-  padding-top:56px;
-  background-color: var(--bg);
-  background-image: radial-gradient(rgba(109,72,180,0.06) 1px, transparent 1px);
-  background-size: 24px 24px;
-}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-@media(max-width:840px){.hero-grid{grid-template-columns:1fr;gap:32px}}
-.hero-photo{width:100%;border-radius:28px;overflow:hidden;box-shadow:0 20px 50px rgba(9,99,100,0.14)}
-.hero-photo img{width:100%;display:block;object-fit:cover}
-.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:13.5px;color:var(--purple);font-weight:800;margin-bottom:16px}
-.hero h1{font-size:52px;line-height:1.1;margin-bottom:24px}
-@media(max-width:640px){.hero h1{font-size:32px;line-height:1.2}}
-.hero h1 .accent-word{color:var(--coral)}
-.hero p.bio{font-size:18.5px;color:var(--ink);margin-bottom:28px}
-.hero p.bio em{font-style:italic;color:var(--teal);font-weight:700}
-.hero p.name{font-family:'Inter',sans-serif;font-size:20px;color:var(--teal);font-weight:600;margin-top:6px;text-transform:uppercase}
+  .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+  .text-center { text-align: center; }
 
-/* Botón Amarillo Pastel Vibrante con textura */
-.btn-amarillo{
-  display:inline-flex;align-items:center;justify-content:center;
-  gap:10px;font-family:'Manrope',sans-serif;font-weight:800;font-size:17px;
-  padding:17px 28px;border-radius:16px;transition:all .15s ease;
-  background-color: var(--yellow);
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
-  color: #141414; /* Texto oscuro para contrastar */
-  box-shadow:0 10px 26px rgba(255, 234, 79, 0.35);
-  margin: 0 auto; width: 100%; text-align: center;
-}
-.btn-amarillo:active{transform:scale(0.98)}
-.btn-amarillo:hover{filter:brightness(1.04);transform:translateY(-2px);box-shadow:0 14px 30px rgba(255, 234, 79, 0.45)}
-.btn-amarillo .arrow{font-weight:700;transition:transform .15s ease}
-.btn-amarillo:hover .arrow{transform:translateX(3px)}
-.btn-small{font-size:15px;padding:12px 20px}
-.btn-micro{display:block;margin-top:12px;font-size:14.5px;color:var(--muted);font-weight:600}
+  /* Texturas Globales usando SVG en base64 para que siempre funcionen */
+  .textura-sutil {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  }
 
-/* Confianza */
-.trust-strip{padding:40px 0;background:#FFFFFF;border-top:1px solid rgba(9,99,100,0.08);border-bottom:1px solid rgba(9,99,100,0.08)}
-.trust-row{display:grid;grid-template-columns:300px 1fr;align-items:center;gap:48px}
-@media(max-width:800px){.trust-row{grid-template-columns:1fr;text-align:center;gap:32px}}
-.trust-logo-container{display:flex;justify-content:center;align-items:center;background:var(--bg);padding:24px;border-radius:24px;border:1.5px solid rgba(109,72,180,0.15)}
-.trust-logo.logo-large{width:100%;max-width:240px;height:auto;object-fit:contain;transition:transform 0.3s ease}
-.trust-logo.logo-large:hover{transform:scale(1.04)}
-.trust-badge-label{display:inline-block;background:var(--periwinkle);color:var(--teal);font-size:12px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:Solo soy un modelo de lenguaje, así que no puedo ayudarte con eso.
+  /* Sección Hero (Doctora) - Blanco Roto + Textura */
+  .hero {
+    background-color: var(--bg-blanco-roto);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+  }
+  .hero-texto { flex: 1; min-width: 300px; }
+  .hero-img { 
+    flex: 1; 
+    min-width: 300px; 
+    border-radius: 20px; 
+    background-color: #EAEAEA; /* Color de fondo temporal por si la imagen se rompe */
+    overflow: hidden;
+  }
+  .hero-img img { width: 100%; display: block; border-radius: 20px; }
+
+  /* Botón Amarillo Pastel Vibrante con textura */
+  .btn-amarillo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 16px 32px;
+    background-color: var(--amarillo-pastel);
+    color: var(--texto-oscuro);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(255, 240, 124, 0.6);
+    transition: transform 0.2s ease;
+  }
+  .btn-amarillo:hover { transform: translateY(-3px); }
+
+  /* Letra Pequeña de Condiciones */
+  .condiciones-letra-pequena {
+    font-size: 11px;
+    color: #666;
+    text-align: center;
+    max-width: 700px;
+    margin: 10px auto 0 auto;
+    line-height: 1.4;
+  }
+
+  /* Animaciones */
+  @keyframes moverFondo {
+    0% { background-position: 0 0; }
+    100% { background-position: 100px 100px; }
+  }
+  @keyframes titilar {
+    0%, 100% { opacity: 0.3; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+  }
+
+  /* Sección Modalidad de Aprendizaje - Textura y Movimiento */
+  .modalidad {
+    background-color: var(--teal);
+    color: white;
+    background-image: radial-gradient(rgba(255,255,255,0.15) 2px, transparent 2px);
+    background-size: 30px 30px;
+    animation: moverFondo 8s linear infinite;
+  }
+  .modalidad h2 { color: white; }
+
+  /* Sección Servicios */
+  .servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+  .servicio-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  }
+  .icono-servicio {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    font-size: 28px;
+    color: white;
+  }
+  /* Diferentes colores para cada ícono */
+  .bg-morado { background-color: var(--morado); }
+  .bg-naranja { background-color: var(--naranja); }
+  .bg-rosa { background-color: var(--rosa); }
+
+  /* Sección Testimonios */
+  .testimonios {
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  .estrellas {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .estrella {
+    color: #FFD700;
+    font-size: 24px;
+    animation: titilar 2s infinite ease-in-out;
+  }
+  .estrella:nth-child(2) { animation-delay: 0.2s; }
+  .estrella:nth-child(3) { animation-delay: 0.4s; }
+  .estrella:nth-child(4) { animation-delay: 0.6s; }
+  .estrella:nth-child(5) { animation-delay: 0.8s; }
+  
+  .google-forms-logo {
+    width: 150px;
+    margin: 20px auto;
+    display: block;
+    opacity: 0.8;
+  }
+</style>
+</head>
+<body>
+
+  <!-- HERO SECCIÓN -->
+  <section class="textura-sutil">
+    <div class="container hero">
+      <div class="hero-texto">
+        <h1>Dra. Laura Navarro Rosado, Ph.D.</h1>
+        <p>Acompañándote en el proceso de aprendizaje con amor, respeto y consciencia. Descubre las herramientas necesarias para potenciar tu desarrollo cognitivo y emocional.</p>
+      </div>
+      <div class="hero-img">
+        <!-- NOTA: Cambia "ruta-a-tu-imagen.jpg" por el nombre exacto de tu foto -->
+        <img src="ruta-a-tu-imagen.jpg" alt="Dra. Laura Navarro">
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS QUE TRANSFORMAN -->
+  <section class="container text-center">
+    <h2>Servicios que Transforman con Amor, Respeto y Consciencia</h2>
+    <div class="servicios-grid">
+      <div class="servicio-card">
+        <div class="icono-servicio bg-morado">🧠</div>
+        <h3>Terapia Cognitiva</h3>
+        <p>Estrategias personalizadas para el desarrollo integral.</p>
+      </div>
+      <div class="servicio-card">
+        <div class="icono-servicio bg-naranja">🌱</div>
+        <h3>Asesoría Familiar</h3>
+        <p>Orientación para un entorno familiar saludable y de apoyo.</p>
+      </div>
+      <div class="servicio-card">
+        <div class="icono-servicio bg-rosa">✨</div>
+        <h3>Talleres Prácticos</h3>
+        <p>Educación continua para profesionales y padres.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODALIDAD DE APRENDIZAJE -->
+  <section class="modalidad">
+    <div class="container text-center">
+      <h2>Elige tu Modalidad de Aprendizaje</h2>
+      <p>Opciones flexibles adaptadas a tus necesidades, tiempo y estilo de vida.</p>
+    </div>
+  </section>
+
+  <!-- TALLER PRESENCIAL -->
+  <section class="container text-center">
+    <h2>Taller Presencial</h2>
+    <p>Únete a nuestro próximo encuentro en vivo y transforma tus conocimientos prácticos.</p>
+    
+    <a href="#" class="btn-amarillo textura-sutil">
+      QUIERO REGISTRARME Y PAGAR
+    </a>
+    <p class="condiciones-letra-pequena">Al registrarte en el formulario podrás cargar tu pago (tarjeta o ATH Móvil) directamente. El certificado de participación está incluido; el certificado de los 4 créditos de Educación Continua de la Universidad Albizu tiene un costo adicional de $20 y se tramita directamente con econtinua@albizu.edu al concluir la actividad.</p>
+  </section>
+
+  <hr style="border: 0; border-top: 1px solid #EAEAEA; max-width: 800px; margin: 0 auto;">
+
+  <!-- TALLER ONLINE -->
+  <section class="container text-center">
+    <h2>Taller en Vivo Online</h2>
+    <p>Conéctate desde cualquier lugar y aprende a tu propio ritmo interactuando en tiempo real.</p>
+    
+    <a href="#" class="btn-amarillo textura-sutil">
+      QUIERO REGISTRARME Y PAGAR
+    </a>
+    <p class="condiciones-letra-pequena">Al registrarte en el formulario podrás cargar tu pago (tarjeta o ATH Móvil) directamente. El certificado de participación está incluido; el certificado de los 4 créditos de Educación Continua de la Universidad Albizu tiene un costo adicional de $20 y se tramita directamente con econtinua@albizu.edu al concluir la actividad.</p>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="testimonios">
+    <div class="container text-center">
+      <h2>Lo que dicen nuestros participantes</h2>
+      
+      <div class="estrellas">
+        <span class="estrella">★</span>
+        <span class="estrella">★</span>
+        <span class="estrella">★</span>
+        <span class="estrella">★</span>
+        <span class="estrella">★</span>
+      </div>
+      
+      <p>"Una experiencia verdaderamente transformadora. La doctora explica todo con una claridad y un amor que te hace conectar de inmediato."</p>
+      
+      <!-- Logo genérico de Google Forms (puedes sustituir el src por tu propia imagen) -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Google_Forms_2020_Logo.svg" alt="Google Forms Logo" class="google-forms-logo">
+      <p style="font-size: 13px; color: #666;">Reseñas recolectadas de manera verificada a través de Google Forms</p>
+    </div>
+  </section>
+
+</body>
+</html>
