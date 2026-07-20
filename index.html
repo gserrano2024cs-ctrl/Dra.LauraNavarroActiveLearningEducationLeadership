@@ -19,11 +19,14 @@
   
   /* Iconos de Servicios */
   .service-icon { width: 48px; height: 48px; margin-bottom: 16px; display: block; margin-left: auto; margin-right: auto; }
+  
+  /* Textos Legales */
+  .legal-text { font-size: 12px; color: var(--muted); text-align: center; margin-top: 10px; line-height: 1.4; }
+
   :root {
     --bg-roto: #FDFCF8; /* Blanco roto */
     --texto: #20302F;
     --amarillo-pastel: #FFF07C;
-    /* Colores de acento mantenidos de tu versión anterior para que no se rompan las tarjetas/botones */
     --teal: #096364;
     --purple: #6D48B4;
     --olive: #C4C367;
@@ -152,7 +155,6 @@
   .close:hover, .close:focus { color: var(--coral); }
 
   /* Testimonios Slider */
-  .testimonials-section { background: var(--bg-roto); padding: 80px 0; overflow: hidden; }
   .testimonials-slider-wrapper { position: relative; max-width: 780px; margin: 40px auto 0; padding: 0 16px; }
   .testimonials-track-container { overflow: hidden; width: 100%; }
   .testimonials-track { display: flex; transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); width: 100%; }
@@ -171,8 +173,8 @@
   @media(max-width:768px) { .services-grid { grid-template-columns: 1fr; } }
   .service-box-card { background: var(--bg-roto); border-radius: 24px; padding: 36px; border: 1.5px solid rgba(9,99,100,0.06); display: flex; flex-direction: column; justify-content: space-between; transition: all 0.25s ease; }
   .service-box-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(9,99,100,0.08); border-color: rgba(109,72,180,0.2); }
-  .service-box-card h3 { font-size: 22px; color: var(--teal); margin-bottom: 14px; line-height: 1.25; }
-  .service-desc { font-size: 16px; color: var(--texto); line-height: 1.6; margin-bottom: 24px; }
+  .service-box-card h3 { font-size: 22px; color: var(--teal); margin-bottom: 14px; line-height: 1.25; text-align: center; }
+  .service-desc { font-size: 16px; color: var(--texto); line-height: 1.6; margin-bottom: 24px; text-align: center; }
   .service-box-card .btn { width: 100%; margin-top: auto; }
 
   /* Botón Flotante y Footer */
@@ -186,12 +188,6 @@
   .social-links { display: flex; justify-content: center; gap: 20px; margin-top: 24px; }
   .social-links a { display: flex; align-items: center; gap: 8px; color: var(--purple); font-weight: 600; font-size: 15px; transition: color 0.2s; padding: 10px 16px; background: var(--bg-roto); border-radius: 100px; }
   .social-links a:hover { color: var(--coral); background: rgba(226, 112, 79, 0.1); }
-/* Correcciones integradas */
-.testimonials-section { position: relative; background: var(--bg-roto); padding: 80px 0; overflow: hidden; }
-.star-field { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; background-image: radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px); background-size: 50px 50px; animation: twinkle 5s linear infinite; opacity: 0.3; }
-@keyframes twinkle { 0% { transform: translateY(0); } 100% { transform: translateY(-50px); } }
-.service-icon { width: 48px; height: 48px; margin-bottom: 16px; display: block; margin-left: auto; margin-right: auto; }
-.legal-text { font-size: 12px; color: var(--muted); text-align: center; margin-top: 10px; }
 </style>
 </head>
 <body>
@@ -203,7 +199,7 @@
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <div class="eyebrow">Formación Avalada · Cupos Limitados</div>
+      <div class="eyebrow">Formación Gestionada · Cupos Limitados</div>
       <h1>Enseña a Leer y Escribir desde la <span class="accent-word">Ciencia</span> y la <span class="accent-word">Calma</span></h1>
       <p class="bio">Soy la Dra. Laura Navarro Rosado, Ph.D., y formo a docentes, terapeutas y profesionales de apoyo educativo en <em>Lectoescritura Mindful</em>: un enfoque respaldado por neurociencia y validado en el salón de clases, gestionado por el Departamento de Educación Continua de la Universidad Albizu y con aval solicitado ante la Universidad del Bío-Bío, para que cada estudiante aprenda a leer y escribir desde la calma, la atención y la conexión real.</p>
       <a class="btn btn-primary" href="#modalidades">Ver Fechas Disponibles <span class="arrow">→</span></a>
@@ -236,6 +232,7 @@
   <div class="container">
     <h2 class="section-title">Elige tu Modalidad de Aprendizaje</h2>
     <div class="mod-grid">
+      <!-- Tarjeta Presencial -->
       <div class="mod-card">
         <span class="mod-tag presencial">Presencial</span>
         <h3>Taller Vivencial</h3>
@@ -265,23 +262,13 @@
           <div class="pay-row">
             <div class="btn-group-row">
               <a href="https://docs.google.com/forms/d/e/1FAIpQLScSENeRUWpA7ZvN6Sd5QeInsabaaipEiK97iYj5qs0ilcj6_A/viewform?usp=pp_url" target="_blank" class="btn btn-primary btn-small">Quiero Registrarme y Pagar</a>
-              <div class="price-box">
-  <div class="tier">
-    <span class="tier-label">Early Bird — hasta el 15 de agosto</span>
-    <span class="tier-price">$97</span>
-  </div>
-  <p class="tier-note">Ahorras $23 | Pago único Lectoescritura Mindful ONLINE</p>
-</div>
-<p class="legal-text">
-  Al registrarte en el formulario podrás cargar tu pago (tarjeta o ATH Móvil) directamente. El certificado de participación está incluido; el certificado de los 4 créditos de Educación Continua de la Universidad Albizu tiene un costo adicional de $20 y se tramita directamente con econtinua@albizu.edu al concluir la actividad.
-</p>
-              
             </div>
             <a href="https://forms.gle/PMEnkS3gZeYq5ay1A" target="_blank" class="btn btn-micro" style="text-align:center; text-decoration:underline;">¿Representas a una Institución? Registra tu grupo aquí</a>
           </div>
         </div>
       </div>
 
+      <!-- Tarjeta Online -->
       <div class="mod-card">
         <span class="mod-tag online">Sincrónica</span>
         <h3>Taller Online En Vivo</h3>
@@ -302,19 +289,25 @@
           <li>Acceso a 4 horas válidas para educación continua (sujeto a aval)</li>
           <li>Grabación de la sesión disponible por 15 días</li>
         </ul>
+        
+        <!-- Bloque de Precio y Condiciones Corregido -->
         <div class="price-box">
           <div class="tier">
-            <span class="tier-label">Inversión Digital</span>
-            <span class="tier-price">$95 USD</span>
+            <span class="tier-label">Early Bird — hasta el 15 de agosto</span>
+            <span class="tier-price">$97</span>
           </div>
-          <p class="tier-note">Acceso desde cualquier país de Latinoamérica</p>
+          <p class="tier-note">Ahorras $23 | Pago único Lectoescritura Mindful ONLINE</p>
           <div class="pay-row">
             <div class="btn-group-row">
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSfH50jOSCroL2Uh8CViJjX4tTDWosW9q1s5J2nP8A5l3Qm5uA/viewform" target="_blank" class="btn btn-primary btn-small">Quiero Registrarme y Pagar</a>
             </div>
+            <p class="legal-text">
+              Al registrarte en el formulario podrás cargar tu pago (tarjeta o ATH Móvil) directamente. El certificado de participación está incluido; el certificado de los 4 créditos de Educación Continua de la Universidad Albizu tiene un costo adicional de $20 y se tramita directamente con econtinua@albizu.edu al concluir la actividad.
+            </p>
             <a href="https://forms.gle/PMEnkS3gZeYq5ay1A" target="_blank" class="btn btn-micro" style="text-align:center; text-decoration:underline;">¿Representas a una Institución? Registra tu grupo aquí</a>
           </div>
         </div>
+        
       </div>
     </div>
   </div>
@@ -370,7 +363,8 @@
 </div>
 
 <!-- TESTIMONIOS -->
-<section class="testimonials-section"><div class="star-field"></div>
+<section class="testimonials-section">
+  <div class="star-field"></div>
   <div class="container">
     <div class="section-sub">La voz de quienes ya lo vivieron</div>
     <h2 class="section-title">Evaluaciones del Taller y Testimonios</h2>
@@ -395,6 +389,8 @@
     <div class="services-grid">
       <div class="service-box-card">
         <div>
+          <!-- SVG Icono Amarillo Pastel -->
+          <svg class="service-icon" fill="#FFF07C" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           <h3>Liderazgo Mindful y Desarrollo Organizacional</h3>
           <p class="service-desc">Consultoría estratégica orientada a empresas y organizaciones que buscan robustecer sus culturas internas, optimizar la toma de decisiones y promover un ambiente de bienestar sostenible.</p>
         </div>
@@ -402,6 +398,8 @@
       </div>
       <div class="service-box-card">
         <div>
+          <!-- SVG Icono Verde Menta Pastel -->
+          <svg class="service-icon" fill="#B2EFCF" viewBox="0 0 24 24"><path d="M20 6h-8l-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z"/></svg>
           <h3>Mentorías, Consultoría y Coaching Educativo</h3>
           <p class="service-desc">Mentorías personalizadas y consultorías estructuradas en Coaching de Comunicación Mindful. Espacios diseñados para potenciar habilidades pedagógicas con enfoque consciente.</p>
         </div>
@@ -409,6 +407,8 @@
       </div>
       <div class="service-box-card">
         <div>
+          <!-- SVG Icono Azul Celeste Pastel -->
+          <svg class="service-icon" fill="#CADCF1" viewBox="0 0 24 24"><path d="M12 2L2 12h3v8h6v-6h2v6h6v-8h3L12 2z"/></svg>
           <h3>Mapa Profesional</h3>
           <p class="service-desc">Accede a nuestra guía gratuita diseñada especialmente para trazar rutas estratégicas, objetivos de crecimiento laboral y metas pedagógicas claras.</p>
         </div>
@@ -416,6 +416,8 @@
       </div>
       <div class="service-box-card">
         <div>
+          <!-- SVG Icono Lila Pastel -->
+          <svg class="service-icon" fill="#C5B3FF" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
           <h3>Diseño de Intervenciones Mindful en Contextos Corporativos</h3>
           <p class="service-desc">Diseñado exclusivamente para psicólogos industriales, profesionales de Recursos Humanos y empresas decididas a integrar la atención plena en sus dinámicas de trabajo.</p>
         </div>
